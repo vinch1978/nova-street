@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#ECEAE4;overflow-x:clip}
+*{box-sizing:border-box}
+button,input{font:inherit;color:inherit}
+:focus{outline:none}
+:focus-visible{outline:2px solid #00695C;outline-offset:2px}
+a{color:#00695C;text-decoration:underline;text-underline-offset:3px}
+a:hover{color:#00695C;text-decoration-thickness:2px}
+@keyframes nsSheetUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+@keyframes nsFade{from{opacity:0}to{opacity:1}}
+/* NS-DESK-CSS:start */
+[data-ns-d]{display:none!important}
+@media (min-width:768px){[data-ns-root]{max-width:none!important}[data-ns-sec]{padding-left:24px!important;padding-right:24px!important}}
+@media (min-width:1024px){
+[data-ns-m]{display:none!important}
+[data-ns-d=flex]{display:flex!important}
+[data-ns-d=block]{display:block!important}
+[data-ns-sec]{padding-left:max(32px, calc((100% - 1280px) / 2))!important;padding-right:max(32px, calc((100% - 1280px) / 2))!important}
+}
+[data-ns-nav]:hover{border-bottom-color:#86837C!important}
+[data-ns-nav][aria-current=page]{border-bottom-color:#1E1E1E!important}
+@keyframes nsSlideIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
+@media (prefers-reduced-motion: reduce){#ns-mini{animation:none!important}}
+/* NS-DESK-CSS:end */
+/* NS-DESK-PDP:start */
+@media (min-width:768px){
+[data-ns=bar]{max-width:none!important}
+#ns-menu{max-width:none!important}
+[data-ns=sheet-p]{max-width:480px!important}
+}
+@media (min-width:768px) and (max-width:1023.98px){
+[data-ns=back],[data-ns=pdp]{max-width:640px;margin-left:auto;margin-right:auto}
+[data-ns=g-grid]{grid-template-columns:minmax(0,1fr) 96px!important;width:100%!important;gap:16px!important}
+[data-ns=g-main]{width:100%!important;height:auto!important;aspect-ratio:4 / 5}
+[data-ns=g-th]{height:auto!important;gap:16px!important}
+[data-ns=g-th] > button{width:96px!important;height:120px!important;flex:0 0 120px!important}
+[data-ns=look] [data-ns=grid4]{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:24px 16px!important}
+}
+@media (min-width:1024px){
+[data-ns-root]{padding-bottom:0!important}
+[data-ns=back]{display:flex!important;align-items:center;justify-content:space-between;gap:24px;padding:16px max(32px, calc((100% - 1280px) / 2)) 8px!important}
+[data-ns=pdp]{display:grid!important;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"g b" "a b";column-gap:48px;align-items:start;padding:0 max(32px, calc((100% - 1280px) / 2))}
+[data-ns=pdp] > *{padding-left:0!important;padding-right:0!important}
+[data-ns=pdp-g]{grid-area:g}
+[data-ns=pdp-a]{grid-area:a;margin-top:48px!important}
+[data-ns=pdp-a] h2 > button{padding-left:0!important;padding-right:0!important}
+[data-ns=pdp-a] [id^=ns-acc-]{padding-left:0!important;padding-right:0!important}
+[data-ns=pdp-b]{grid-area:b;position:sticky;top:24px;align-self:start;background:#FFFFFF;padding:24px!important}
+[data-ns=pdp-b] > section{padding-left:0!important;padding-right:0!important}
+[data-ns=pdp-b] > section:first-child{padding-top:0!important}
+[data-ns=pdp-b] h1{font-size:36px!important;line-height:42px!important}
+[data-ns=g-grid]{grid-template-columns:minmax(0,1fr) 96px!important;width:100%!important;gap:16px!important}
+[data-ns=g-main]{width:100%!important;height:auto!important;aspect-ratio:4 / 5}
+[data-ns=g-th]{height:auto!important;gap:16px!important}
+[data-ns=g-th] > button{width:96px!important;height:120px!important;flex:0 0 120px!important}
+[data-ns=look]{padding-left:max(32px, calc((100% - 1280px) / 2))!important;padding-right:max(32px, calc((100% - 1280px) / 2))!important}
+[data-ns=look] h2{font-size:32px!important;line-height:40px!important}
+[data-ns=grid4]{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:32px 24px!important}
+[data-ns=foot]{flex-direction:row!important;justify-content:space-between;align-items:center;flex-wrap:wrap;padding-left:max(32px, calc((100% - 1280px) / 2))!important;padding-right:max(32px, calc((100% - 1280px) / 2))!important}
+[data-ns=sheet-c]{justify-content:center!important}
+[data-ns=sheet-p]{max-height:80vh!important}
+}
+/* NS-DESK-PDP:end */
+</style>
+</helmet>
+
+<div data-ns-root="" style="max-width:375px;margin:0 auto;background:#ECEAE4;font-family:'Work Sans',sans-serif;color:#1E1E1E;font-size:16px;line-height:24px;padding-bottom:calc(81px + env(safe-area-inset-bottom, 0px));overflow-x:clip;min-height:100vh">
+
+  <!-- NS-DESK-HEADER:start -->
+  <header data-ns-d="flex" style="height:72px;background:#FFFFFF;border-bottom:1px solid #D6D3CB;align-items:center;justify-content:space-between;gap:24px;padding:0 max(32px, calc((100% - 1280px) / 2))">
+    <a href="Accueil - Mobile.dc.html" aria-label="NOVA STREET, accueil" style="flex:0 0 auto;font:700 26px/32px 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.04em;color:#1E1E1E;text-decoration:none;padding:8px 0">NOVA STREET</a>
+    <nav aria-label="Navigation principale" style="height:100%;display:flex;align-items:stretch;gap:24px">
+      <sc-for list="{{ deskNav }}" as="dn" hint-placeholder-count="5">
+        <a href="{{ dn.href }}" data-ns-nav="" aria-current="{{ dn.current }}" onClick="{{ dn.go }}" style="display:flex;align-items:center;padding-top:2px;border-bottom:2px solid transparent;color:#1E1E1E;text-decoration:none;font:600 15px/20px 'Work Sans',sans-serif;white-space:nowrap">{{ dn.label }}</a>
+      </sc-for>
+    </nav>
+    <div style="flex:0 0 auto;display:flex;align-items:center;gap:4px;margin-right:-12px">
+      <button type="button" aria-label="Rechercher dans la collection" onClick="{{ deskSearch }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0">{{ deskIc.search }}</button>
+      <button type="button" aria-label="{{ cartLabel }}" aria-haspopup="dialog" onClick="{{ openMini }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0;position:relative">
+        {{ ic.cart }}
+        <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ false }}">
+          <span aria-hidden="true" style="position:absolute;top:6px;right:4px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:#FF5B00;color:#1E1E1E;font:600 12px/18px 'Work Sans',sans-serif;text-align:center">{{ cart }}</span>
+        </sc-if>
+      </button>
+    </div>
+  </header>
+  <!-- NS-DESK-HEADER:end -->
+  <header data-ns-m="" style="height:56px;background:#FFFFFF;border-bottom:1px solid #D6D3CB;display:flex;align-items:center;justify-content:space-between;padding:0 4px">
+    <button type="button" ref="{{ menuBtnRef }}" aria-label="Ouvrir le menu" aria-expanded="{{ menuExpanded }}" aria-controls="ns-menu" onClick="{{ openMenu }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0">{{ ic.menu }}</button>
+    <a href="Accueil - Mobile.dc.html" aria-label="NOVA STREET, accueil" style="font:700 22px/28px 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.04em;color:#1E1E1E;text-decoration:none;padding:8px">NOVA STREET</a>
+    <button type="button" aria-label="{{ cartLabel }}" onClick="{{ cartSoon }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0;position:relative">
+      {{ ic.cart }}
+      <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ false }}">
+        <span aria-hidden="true" style="position:absolute;top:6px;right:4px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:#FF5B00;color:#1E1E1E;font:600 12px/18px 'Work Sans',sans-serif;text-align:center">{{ cart }}</span>
+      </sc-if>
+    </button>
+  </header>
+  <div aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ cartAnnounce }}</div>
+
+  <div data-ns="back" style="padding:0 16px">
+    <nav data-ns-d="flex" aria-label="Fil d'Ariane" style="gap:8px;font-size:14px;line-height:20px;color:#5C5A55">
+      <a href="Accueil - Mobile.dc.html">Accueil</a><span aria-hidden="true">/</span><a href="Catalogue - Mobile.dc.html">La collection</a><span aria-hidden="true">/</span><span aria-current="page">HOODIE AXE</span>
+    </nav>
+    <a href="Catalogue - Mobile.dc.html" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;line-height:20px;gap:4px">← Retour à la collection</a>
+  </div>
+
+  <div data-ns="pdp">
+  <section data-ns="pdp-g" aria-label="Photos du produit" style="padding:0 16px;display:flex;flex-direction:column;gap:8px">
+    <div data-ns="g-grid" style="display:grid;grid-template-columns:272px 63px;gap:8px;width:343px;max-width:100%">
+      <div data-ns="g-main" role="img" aria-label="{{ mainAria }}" style="box-sizing:border-box;width:272px;height:340px;background:#FFFFFF">{{ mainSvg }}</div>
+      <div data-ns="g-th" style="display:flex;flex-direction:column;gap:8px;height:340px">
+        <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="4">
+          <button type="button" aria-label="{{ t.aria }}" aria-pressed="{{ t.pressed }}" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.svg }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <p aria-live="polite" style="margin:0;font-size:14px;line-height:20px;color:#5C5A55">Vue : {{ slideLabel }}</p>
+  </section>
+
+  <div data-ns="pdp-b">
+  <section style="padding:24px 16px 0;display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;color:#5C5A55">DROP 01</span>
+      <span style="font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;color:#1E1E1E;background:#FF5B00;padding:4px 8px">NOUVEAU</span>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px">
+      <h1 style="margin:0;min-width:0;font:600 26px/32px 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.01em;text-wrap:balance">HOODIE AXE</h1>
+      <p style="margin:0;flex:0 0 auto;white-space:nowrap;font:600 20px/28px 'Work Sans',sans-serif">89 €</p>
+    </div>
+  </section>
+
+  <section aria-label="Choix du coloris" style="padding:16px 16px 0">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px;min-height:20px">
+      <p style="margin:0;font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase"><span style="color:#5C5A55">COLORIS :</span> {{ colorUpper }}</p>
+    </div>
+    <div style="display:flex;gap:4px;margin-left:-8px">
+      <sc-for list="{{ swatches }}" as="sw" hint-placeholder-count="5">
+        <button type="button" aria-label="{{ sw.aria }}" aria-pressed="{{ sw.pressed }}" onClick="{{ sw.pick }}" style="width:48px;height:48px;border-radius:50%;border:0;background:transparent;padding:0;display:flex;align-items:center;justify-content:center;cursor:pointer">
+          <span style="{{ sw.dot }}"></span>
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section ref="{{ sizeRef }}" aria-label="Choix de la taille" style="padding:24px 16px 0">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+      <p style="margin:0;font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase">TAILLE<span style="color:#5C5A55">{{ sizeSuffix }}</span></p>
+      <button type="button" onClick="{{ openGuide }}" style="min-height:44px;background:transparent;border:0;padding:0 0 0 8px;cursor:pointer;color:#00695C;text-decoration:underline;text-underline-offset:3px;font-size:14px;line-height:20px">Guide des tailles</button>
+    </div>
+    <p style="margin:0 0 12px;font-size:14px;line-height:20px;color:#5C5A55">Mannequin : 1,80 m, porte une taille L</p>
+    <div ref="{{ sizeGroupRef }}" role="group" aria-label="Tailles" tabindex="-1" style="display:flex;gap:8px">
+      <sc-for list="{{ sizes }}" as="sz" hint-placeholder-count="6">
+        <button type="button" aria-label="{{ sz.aria }}" aria-pressed="{{ sz.pressed }}" aria-disabled="{{ sz.disabled }}" aria-describedby="ns-size-msg" onClick="{{ sz.pick }}" style="{{ sz.style }}">{{ sz.id }}</button>
+      </sc-for>
+    </div>
+    <div id="ns-size-msg" aria-live="polite">
+      <sc-if value="{{ sizeError }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:12px 0 0;display:flex;align-items:center;gap:8px;color:#B3261E;font-size:14px;line-height:20px">{{ ic.alert }}Sélectionnez une taille</p>
+      </sc-if>
+      <sc-if value="{{ xxlTouched }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;font-size:14px;line-height:20px">
+          <span style="color:#5C5A55">XXL : Indisponible</span>
+          <button type="button" onClick="{{ openAlert }}" style="min-height:44px;background:transparent;border:0;padding:0;cursor:pointer;color:#00695C;text-decoration:underline;text-underline-offset:3px;font-size:14px;line-height:20px">M'alerter quand disponible</button>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <div data-ns-d="block" style="padding-top:24px">
+    <button type="button" onClick="{{ addToCart }}" style="width:100%;height:48px;background:#1E1E1E;color:#FFFFFF;border:0;border-radius:0;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;cursor:pointer" style-hover="background:#00695C">AJOUTER AU PANIER</button>
+  </div>
+  <section style="padding:24px 16px 0;display:flex;flex-direction:column;gap:16px">
+    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px;font-size:14px;line-height:20px;color:#5C5A55">
+      <li style="display:flex;align-items:center;gap:6px;white-space:nowrap">{{ ic.truck }}Livraison offerte</li>
+      <li style="display:flex;align-items:center;gap:6px;white-space:nowrap">{{ ic.ret }}Retours gratuits sous 30 jours</li>
+    </ul>
+    <p style="margin:0;font-size:16px;line-height:24px;text-wrap:pretty">Hoodie unisexe oversize en molleton épais, capuche doublée.</p>
+  </section>
+
+  </div>
+  <section data-ns="pdp-a" style="margin-top:32px;border-top:1px solid #D6D3CB">
+    <div style="border-bottom:1px solid #D6D3CB">
+      <h2 style="margin:0">
+        <button type="button" aria-expanded="{{ open.desc }}" aria-controls="ns-acc-desc" onClick="{{ toggleDesc }}" style="width:100%;min-height:56px;display:flex;align-items:center;justify-content:space-between;background:transparent;border:0;padding:0 16px;cursor:pointer;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase;color:#1E1E1E;text-align:left">Description<span style="{{ chev.desc }}">{{ ic.chevD }}</span></button>
+      </h2>
+      <sc-if value="{{ open.desc }}" hint-placeholder-val="{{ false }}">
+        <div id="ns-acc-desc" style="padding:0 16px 24px;display:flex;flex-direction:column;gap:12px">
+          <p style="margin:0;text-wrap:pretty">Le HOODIE AXE ouvre le DROP 01. Une coupe oversize unisexe, des épaules tombantes et un molleton dense qui garde sa tenue au fil des lavages.</p>
+          <p style="margin:0;text-wrap:pretty">Capuche doublée, poche kangourou et finitions côtelées aux poignets et à la base.</p>
+        </div>
+      </sc-if>
+    </div>
+    <div style="border-bottom:1px solid #D6D3CB">
+      <h2 style="margin:0">
+        <button type="button" aria-expanded="{{ open.mat }}" aria-controls="ns-acc-mat" onClick="{{ toggleMat }}" style="width:100%;min-height:56px;display:flex;align-items:center;justify-content:space-between;background:transparent;border:0;padding:0 16px;cursor:pointer;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase;color:#1E1E1E;text-align:left">Matière et entretien<span style="{{ chev.mat }}">{{ ic.chevD }}</span></button>
+      </h2>
+      <sc-if value="{{ open.mat }}" hint-placeholder-val="{{ false }}">
+        <div id="ns-acc-mat" style="padding:0 16px 24px;display:flex;flex-direction:column;gap:12px">
+          <p style="margin:0">Molleton, 80 % coton, 20 % polyester.</p>
+          <p style="margin:0">Lavage en machine à 30 °C, sur l'envers.</p>
+        </div>
+      </sc-if>
+    </div>
+    <div style="border-bottom:1px solid #D6D3CB">
+      <h2 style="margin:0">
+        <button type="button" id="livraison-retours" ref="{{ livRef }}" aria-expanded="{{ open.liv }}" aria-controls="ns-acc-liv" onClick="{{ toggleLiv }}" style="width:100%;min-height:56px;display:flex;align-items:center;justify-content:space-between;background:transparent;border:0;padding:0 16px;cursor:pointer;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase;color:#1E1E1E;text-align:left">Livraison et retours<span style="{{ chev.liv }}">{{ ic.chevD }}</span></button>
+      </h2>
+      <sc-if value="{{ open.liv }}" hint-placeholder-val="{{ false }}">
+        <div id="ns-acc-liv" style="padding:0 16px 24px;display:flex;flex-direction:column;gap:12px">
+          <p style="margin:0">Livraison standard à domicile en 3 à 5 jours : 6,99 € pour un panier inférieur à 80 €, offerte dès 80 €.</p>
+          <p style="margin:0">Retours gratuits sous 30 jours.</p>
+          <p style="margin:0;font-size:14px;line-height:20px;color:#5C5A55">Les moyens de paiement sont présentés à titre illustratif : aucune transaction réelle n'est effectuée.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+  </div>
+
+  <section data-ns="look" aria-labelledby="ns-look" style="padding:48px 16px 0">
+    <h2 id="ns-look" style="margin:0 0 16px;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase">Complète ton look</h2>
+    <div data-ns="grid4" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px">
+      <sc-for list="{{ looks }}" as="p" hint-placeholder-count="4">
+        <a href="{{ p.href }}" role="link" tabindex="0" aria-label="{{ p.aria }}" onClick="{{ p.click }}" onKeyDown="{{ p.key }}" style="display:flex;flex-direction:column;gap:8px;color:#1E1E1E;text-decoration:none" style-hover="color:#1E1E1E;text-decoration:none">
+          <div style="aspect-ratio:4 / 5;background:#FFFFFF">{{ p.svg }}</div>
+          <p style="margin:0;font:500 14px/20px 'Work Sans',sans-serif;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ p.name }}</p>
+          <p style="margin:-4px 0 0;font:600 14px/20px 'Work Sans',sans-serif">{{ p.price }}</p>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer data-ns="foot" style="margin-top:48px;border-top:1px solid #D6D3CB;padding:24px 16px 32px;display:flex;flex-direction:column;gap:16px">
+    <nav aria-label="Informations" style="display:flex;flex-wrap:wrap;gap:0 24px;font-size:14px;line-height:20px">
+      <a href="#livraison-retours" onClick="{{ goLiv }}" style="min-height:44px;display:inline-flex;align-items:center">Livraison</a>
+      <a href="#livraison-retours" onClick="{{ goLiv }}" style="min-height:44px;display:inline-flex;align-items:center">Retours</a>
+      <a href="mailto:contact@novastreet.example" style="min-height:44px;display:inline-flex;align-items:center">Contact</a>
+      <a role="button" tabindex="0" aria-haspopup="dialog" onClick="{{ openLegal }}" onKeyDown="{{ legalKey }}" style="min-height:44px;display:inline-flex;align-items:center">Mentions légales</a>
+    </nav>
+    <p style="margin:0;font-size:12px;line-height:16px;color:#5C5A55">© 2026 NOVA STREET · Boutique fictive, prototype de formation</p>
+  </footer>
+
+  <sc-if value="{{ toastBottom }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;left:0;right:0;bottom:calc(97px + env(safe-area-inset-bottom, 0px));margin:0 auto;width:calc(100% - 32px);max-width:343px;z-index:70;background:#1E1E1E;color:#FFFFFF;padding:12px 16px;font-size:14px;line-height:20px;animation:nsFade 160ms ease-out">{{ toastMsg }}</div>
+  </sc-if>
+  <sc-if value="{{ toastTop }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;left:0;right:0;top:16px;margin:0 auto;width:calc(100% - 32px);max-width:343px;z-index:70;background:#1E1E1E;color:#FFFFFF;padding:12px 16px;font-size:14px;line-height:20px;animation:nsFade 160ms ease-out">{{ toastMsg }}</div>
+  </sc-if>
+  <div role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ toastMsg }}</div>
+
+  <div data-ns="bar" data-ns-m="" style="position:fixed;bottom:0;left:0;right:0;margin:0 auto;width:100%;max-width:375px;background:#FFFFFF;border-top:1px solid #D6D3CB;padding:16px 16px calc(16px + env(safe-area-inset-bottom, 0px));z-index:20;display:flex;align-items:center;gap:16px">
+    <button type="button" onClick="{{ addToCart }}" style="flex:1 1 auto;min-width:0;height:48px;background:#1E1E1E;color:#FFFFFF;border:0;border-radius:0;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;cursor:pointer" style-hover="background:#00695C">AJOUTER AU PANIER</button>
+  </div>
+
+  <!-- NS-DESK-MINI:start -->
+  <sc-if value="{{ miniOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-ns-d="block" data-ns-mini="" style="position:fixed;inset:0;z-index:90">
+      <div onClick="{{ closeMini }}" aria-hidden="true" style="position:absolute;inset:0;background:rgba(30,30,30,0.5);animation:nsFade 200ms ease-out"></div>
+      <div id="ns-mini" role="dialog" aria-modal="true" aria-labelledby="ns-mini-title" style="position:absolute;top:0;right:0;bottom:0;width:400px;max-width:100%;background:#FFFFFF;display:flex;flex-direction:column;animation:nsSlideIn 260ms cubic-bezier(.2,.8,.2,1)">
+        <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 24px;border-bottom:1px solid #D6D3CB">
+          <div style="display:flex;align-items:baseline;gap:12px">
+            <h2 id="ns-mini-title" tabindex="-1" style="margin:0;font:600 22px/28px 'Oswald',sans-serif;text-transform:uppercase">Mon panier</h2>
+            <span style="font-size:14px;line-height:20px;color:#5C5A55">{{ miniCountText }}</span>
+          </div>
+          <button type="button" aria-label="Fermer le mini-panier" onClick="{{ closeMini }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0">{{ ic.close }}</button>
+        </div>
+        <sc-if value="{{ miniAdded }}" hint-placeholder-val="{{ false }}">
+          <div id="ns-mini-added" tabindex="-1" role="status" style="flex:0 0 auto;display:flex;gap:12px;align-items:flex-start;padding:16px 24px;border-bottom:1px solid #D6D3CB">
+            {{ deskIc.check }}
+            <div style="display:flex;flex-direction:column">
+              <span style="font-weight:600">Article ajouté au panier</span>
+              <span style="font-size:14px;line-height:20px;color:#5C5A55">{{ miniAddedText }}</span>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ miniEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="flex:1 1 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:32px 24px;text-align:center">
+            <div aria-hidden="true" style="width:96px;height:96px;background:#ECEAE4;display:flex;align-items:center;justify-content:center;color:#86837C">{{ deskIc.empty }}</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <p style="margin:0;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase">Votre panier est vide.</p>
+              <p style="margin:0;color:#5C5A55">Découvrez la collection DROP 01.</p>
+            </div>
+            <button type="button" onClick="{{ miniGoCatalogue }}" style="height:48px;width:100%;display:flex;align-items:center;justify-content:center;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;border-radius:0;cursor:pointer;background:#1E1E1E;color:#FFFFFF;border:0" style-hover="background:#00695C">DÉCOUVRIR LA COLLECTION</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ miniHas }}" hint-placeholder-val="{{ false }}">
+          <ul aria-label="Articles du panier" style="flex:1 1 auto;min-height:0;overflow-y:auto;list-style:none;margin:0;padding:0 24px">
+            <sc-for list="{{ miniLines }}" as="ml" hint-placeholder-count="2">
+              <li style="display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;padding:16px 0;border-bottom:1px solid #D6D3CB;align-items:start">
+                <div aria-hidden="true" style="width:56px;aspect-ratio:4 / 5;border:1px solid #D6D3CB;background:#FFFFFF">{{ ml.svg }}</div>
+                <div style="display:flex;flex-direction:column;font-size:14px;line-height:20px;min-width:0">
+                  <span style="font-weight:600;text-transform:uppercase;letter-spacing:0.04em">{{ ml.name }}</span>
+                  <span style="color:#5C5A55">{{ ml.color }} · {{ ml.sizeText }}</span>
+                  <span style="color:#5C5A55">Quantité : {{ ml.qty }}</span>
+                </div>
+                <span style="font:600 14px/20px 'Work Sans',sans-serif;white-space:nowrap">{{ ml.lineTotal }}</span>
+              </li>
+            </sc-for>
+          </ul>
+          <div style="flex:0 0 auto;border-top:1px solid #D6D3CB;padding:16px 24px calc(16px + env(safe-area-inset-bottom, 0px));display:flex;flex-direction:column;gap:12px">
+            <sc-if value="{{ miniHasRemain }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:0;font-size:14px;line-height:20px;color:#5C5A55">{{ miniRemainText }}</p>
+            </sc-if>
+            <dl style="margin:0;display:flex;flex-direction:column;gap:4px;font-size:14px;line-height:20px">
+              <div style="display:flex;justify-content:space-between;gap:12px"><dt>Sous-total</dt><dd style="margin:0;white-space:nowrap">{{ miniSub }}</dd></div>
+              <div style="display:flex;justify-content:space-between;gap:12px"><dt>Livraison standard</dt><dd style="margin:0;white-space:nowrap">{{ miniShip }}</dd></div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:4px"><dt style="font-weight:600;font-size:16px">Total</dt><dd style="margin:0;white-space:nowrap;font:600 18px/24px 'Work Sans',sans-serif">{{ miniTotal }}</dd></div>
+            </dl>
+            <button type="button" onClick="{{ miniGoCart }}" style="height:48px;width:100%;display:flex;align-items:center;justify-content:center;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;border-radius:0;cursor:pointer;background:#1E1E1E;color:#FFFFFF;border:0" style-hover="background:#00695C">VOIR MON PANIER</button>
+            <button type="button" onClick="{{ closeMini }}" style="align-self:center;min-height:44px;padding:0 12px;background:transparent;border:0;cursor:pointer;color:#00695C;text-decoration:underline;text-underline-offset:3px;font:600 14px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em">Continuer mes achats</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+  <!-- NS-DESK-MINI:end -->
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="ns-menu" ref="{{ menuRef }}" role="dialog" aria-modal="true" aria-label="Menu" style="position:fixed;top:0;bottom:0;left:0;right:0;margin:0 auto;width:100%;max-width:375px;background:#FFFFFF;z-index:50;overflow-y:auto;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom, 0px)">
+      <div style="height:56px;flex:0 0 56px;display:flex;align-items:center;justify-content:space-between;padding:0 4px 0 16px;border-bottom:1px solid #D6D3CB">
+        <span style="font:700 22px/28px 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0.04em">NOVA STREET</span>
+        <button type="button" aria-label="Fermer le menu" onClick="{{ closeMenu }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0">{{ ic.close }}</button>
+      </div>
+      <form role="search" onSubmit="{{ submitMenuSearch }}" style="padding:16px;margin:0;display:flex;flex-direction:column;gap:8px">
+        <label for="ns-search" style="font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase">Rechercher</label>
+        <input id="ns-search" data-autofocus="true" type="search" placeholder="Hoodie, cargo, casquette…" value="{{ menuQ }}" onChange="{{ onMenuQ }}" style="height:48px;width:100%;padding:0 12px;border:1px solid #86837C;border-radius:0;background:#FFFFFF;font-size:16px;color:#1E1E1E;outline-color:#00695C">
+      </form>
+      <nav aria-label="Catégories" style="border-top:1px solid #D6D3CB">
+        <sc-for list="{{ menuLinks }}" as="m" hint-placeholder-count="5">
+          <a href="Catalogue - Mobile.dc.html" onClick="{{ m.go }}" style="min-height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid #D6D3CB;color:#1E1E1E;text-decoration:none;font:600 18px/24px 'Work Sans',sans-serif">{{ m.label }}<span style="display:flex">{{ ic.chevR }}</span></a>
+        </sc-for>
+      </nav>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-ns="sheet-c" style="position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;justify-content:flex-end;align-items:center">
+      <div onClick="{{ closeSheet }}" aria-hidden="true" style="position:absolute;inset:0;background:rgba(30,30,30,0.6);animation:nsFade 200ms ease-out"></div>
+      <div data-ns="sheet-p" ref="{{ panelRef }}" role="dialog" aria-modal="true" aria-label="{{ sheetLabel }}" tabindex="-1" style="position:relative;width:100%;max-width:375px;max-height:90vh;overflow-y:auto;background:#FFFFFF;padding:24px 16px calc(24px + env(safe-area-inset-bottom, 0px));animation:nsSheetUp 260ms cubic-bezier(.2,.8,.2,1)">
+
+        <sc-if value="{{ isConfirm }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <p style="margin:0;display:flex;align-items:center;gap:12px;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase">{{ ic.checkFilled }}Ajouté au panier</p>
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="width:56px;flex:0 0 56px;aspect-ratio:4 / 5;background:#FFFFFF;border:1px solid #D6D3CB">{{ thumb }}</div>
+              <div style="display:flex;flex-direction:column;gap:0;font-size:14px;line-height:20px">
+                <span style="font-weight:600;text-transform:uppercase;letter-spacing:0.04em">HOODIE AXE</span>
+                <span style="color:#5C5A55">{{ colorName }} · Taille {{ size }}</span>
+                <span style="font-weight:600">89 €</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <button type="button" data-autofocus="true" onClick="{{ goCart }}" style="width:100%;height:48px;background:#1E1E1E;color:#FFFFFF;border:0;border-radius:0;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;cursor:pointer" style-hover="background:#00695C">VOIR LE PANIER</button>
+              <button type="button" onClick="{{ closeSheet }}" style="width:100%;height:48px;background:#FFFFFF;color:#1E1E1E;border:2px solid #1E1E1E;border-radius:0;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;cursor:pointer">CONTINUER MES ACHATS</button>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isAlert }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <h2 style="margin:0;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase">Être alerté du retour en stock</h2>
+            <p style="margin:0;font-size:14px;line-height:20px;color:#5C5A55">HOODIE AXE · XXL · {{ colorName }}</p>
+            <sc-if value="{{ alertForm }}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{ submitAlert }}" novalidate="" style="display:flex;flex-direction:column;gap:16px;margin:0">
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <label for="ns-email" style="font-size:14px;line-height:20px;font-weight:600">Adresse e-mail</label>
+                  <input id="ns-email" data-autofocus="true" type="email" autocomplete="email" inputmode="email" placeholder="nom@exemple.fr" value="{{ email }}" onChange="{{ onEmail }}" aria-invalid="{{ emailError }}" aria-describedby="ns-email-err" style="{{ emailStyle }}">
+                  <div id="ns-email-err" aria-live="polite">
+                    <sc-if value="{{ emailError }}" hint-placeholder-val="{{ false }}">
+                      <p style="margin:0;display:flex;align-items:flex-start;gap:8px;color:#B3261E;font-size:14px;line-height:20px">{{ ic.alert }}Saisissez une adresse e-mail valide, par exemple nom@exemple.fr</p>
+                    </sc-if>
+                  </div>
+                </div>
+                <button type="submit" style="width:100%;height:48px;background:#1E1E1E;color:#FFFFFF;border:0;border-radius:0;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;cursor:pointer" style-hover="background:#00695C">M'ALERTER</button>
+                <button type="button" onClick="{{ closeSheet }}" style="align-self:center;min-height:44px;padding:0 12px;background:transparent;border:0;cursor:pointer;color:#00695C;text-decoration:underline;text-underline-offset:3px;font-size:14px;line-height:20px">Fermer</button>
+              </form>
+            </sc-if>
+            <sc-if value="{{ alertDone }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:24px">
+                <p role="status" style="margin:0;display:flex;align-items:flex-start;gap:12px;font-size:16px;line-height:24px">{{ ic.checkFilled }}<span>Alerte simulée : aucun e-mail ne sera envoyé et aucune donnée n'est enregistrée</span></p>
+                <button type="button" data-done-focus="true" onClick="{{ closeSheet }}" style="width:100%;height:48px;background:#1E1E1E;color:#FFFFFF;border:0;border-radius:0;font:600 15px/20px 'Work Sans',sans-serif;text-transform:uppercase;letter-spacing:0.04em;cursor:pointer" style-hover="background:#00695C">RETOUR À LA FICHE PRODUIT</button>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isLegal }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin:-12px -12px 0 0">
+              <h2 style="margin:0;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase">Mentions légales</h2>
+              <button type="button" data-autofocus="true" aria-label="Fermer les mentions légales" onClick="{{ closeSheet }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0">{{ ic.close }}</button>
+            </div>
+            <p style="margin:0;text-wrap:pretty">NOVA STREET est une marque fictive. Cette boutique est un prototype réalisé dans le cadre d'une formation : aucune vente, aucun paiement et aucune collecte de données.</p>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isGuide }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin:-12px -12px 0 0">
+              <h2 style="margin:0;font:600 20px/26px 'Oswald',sans-serif;text-transform:uppercase">Guide des tailles</h2>
+              <button type="button" data-autofocus="true" aria-label="Fermer le guide des tailles" onClick="{{ closeSheet }}" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:0;cursor:pointer;color:#1E1E1E;padding:0">{{ ic.close }}</button>
+            </div>
+            <p style="margin:0;font-size:14px;line-height:20px;color:#5C5A55">HOODIE AXE · valeurs indicatives</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;line-height:20px">
+              <thead>
+                <tr style="border-bottom:1px solid #1E1E1E">
+                  <th scope="col" style="text-align:left;padding:8px 8px 8px 0;font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;vertical-align:bottom">Taille</th>
+                  <th scope="col" style="text-align:right;padding:8px;font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;vertical-align:bottom">Tour de poitrine du vêtement (cm)</th>
+                  <th scope="col" style="text-align:right;padding:8px 0 8px 8px;font:600 12px/16px 'Work Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;vertical-align:bottom">Longueur du vêtement (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{ guideRows }}" as="r" hint-placeholder-count="6">
+                  <tr style="border-bottom:1px solid #D6D3CB">
+                    <th scope="row" style="text-align:left;padding:12px 8px 12px 0;font-weight:600">{{ r.s }}</th>
+                    <td style="text-align:right;padding:12px 8px;font-variant-numeric:tabular-nums">{{ r.c }}</td>
+                    <td style="text-align:right;padding:12px 0 12px 8px;font-variant-numeric:tabular-nums">{{ r.l }}</td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+            <p style="margin:0;font-size:14px;line-height:20px">Coupe oversize : prenez votre taille habituelle pour un tombé ample.</p>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:375,&quot;height&quot;:812}}">
+const h = React.createElement;
+const COLORS = [
+  { name: 'Noir', hex: '#1F1F1F', line: 'rgba(255,255,255,0.22)' },
+  { name: 'Bleu ardoise', hex: '#3A5A80', line: 'rgba(255,255,255,0.22)' },
+  { name: 'Bordeaux', hex: '#7A1F3D', line: 'rgba(255,255,255,0.22)' },
+  { name: 'Rose poudré', hex: '#D8A7B1', line: 'rgba(0,0,0,0.2)' },
+  { name: 'Vert kaki', hex: '#5E6B3A', line: 'rgba(255,255,255,0.22)' }
+];
+const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+const UNAVAILABLE = ['XXL'];
+const BODY = 'M140 118 C140 62 260 62 260 118 L304 134 C332 144 346 164 352 196 L374 362 L336 370 L310 226 L308 404 L92 404 L90 226 L64 370 L26 362 L48 196 C54 164 68 144 96 134 Z';
+
+function icon(paths, extra) {
+  return h('svg', { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.6, strokeLinecap: 'square', 'aria-hidden': 'true', focusable: 'false', style: { display: 'block', flex: '0 0 auto' }, ...extra },
+    ...paths.map((d, i) => h('path', { d, key: i })));
+}
+const small = { width: 16, height: 16 };
+const IC = {
+  menu: icon(['M3 6h18', 'M3 12h18', 'M3 18h18']),
+  cart: icon(['M5 8h14l-1 13H6L5 8z', 'M9 8V6a3 3 0 0 1 6 0v2']),
+  chevL: icon(['M15 5l-7 7 7 7'], { strokeWidth: 1.3 }),
+  chevR: icon(['M9 5l7 7-7 7'], { strokeWidth: 1.3 }),
+  chevD: icon(['M5 9l7 7 7-7'], { strokeWidth: 1.6 }),
+  close: icon(['M6 6l12 12', 'M18 6L6 18']),
+  truck: icon(['M2 6h12v10H2z', 'M14 10h4l3 3v3h-7', 'M5 18.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0', 'M16 18.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0'], small),
+  ret: icon(['M4 9h11a5 5 0 0 1 0 10H8', 'M8 5L4 9l4 4'], small),
+  alert: h('svg', { width: 20, height: 20, viewBox: '0 0 24 24', 'aria-hidden': 'true', focusable: 'false', style: { display: 'block', flex: '0 0 auto' } },
+    h('circle', { cx: 12, cy: 12, r: 10, fill: '#B3261E' }),
+    h('path', { d: 'M12 6.5v7', stroke: '#FFFFFF', strokeWidth: 2.2 }),
+    h('path', { d: 'M12 16v2', stroke: '#FFFFFF', strokeWidth: 2.2 })),
+  checkFilled: h('svg', { width: 28, height: 28, viewBox: '0 0 24 24', 'aria-hidden': 'true', focusable: 'false', style: { display: 'block', flex: '0 0 auto' } },
+    h('circle', { cx: 12, cy: 12, r: 12, fill: '#1E1E1E' }),
+    h('path', { d: 'M6.5 12.5l3.5 3.5 7.5-8', stroke: '#FFFFFF', strokeWidth: 2, fill: 'none' }))
+};
+
+function svgBox(children, key) {
+  return h('svg', { key, viewBox: '0 0 400 500', width: '100%', height: '100%', 'aria-hidden': 'true', focusable: 'false', preserveAspectRatio: 'xMidYMid meet', style: { display: 'block' } }, ...children);
+}
+function hoodieParts(c, view) {
+  const L = c.line;
+  const parts = [h('path', { key: 'b', d: BODY, fill: c.hex, stroke: '#86837C', strokeWidth: view === 'thumb' ? 4 : 1.5 })];
+  parts.push(h('path', { key: 'cl', d: 'M30 344 L60 350 L64 370 L26 362 Z', fill: L }));
+  parts.push(h('path', { key: 'cr', d: 'M370 344 L340 350 L336 370 L374 362 Z', fill: L }));
+  parts.push(h('rect', { key: 'hem', x: 92, y: 384, width: 216, height: 20, fill: L }));
+  if (view === 'back') {
+    parts.push(h('path', { key: 'hs', d: 'M200 70 L200 150', stroke: L, strokeWidth: 3, fill: 'none' }));
+    parts.push(h('path', { key: 'hb', d: 'M146 140 C170 168 230 168 254 140', stroke: L, strokeWidth: 3, fill: 'none' }));
+  } else {
+    parts.push(h('ellipse', { key: 'ho', cx: 200, cy: 122, rx: 42, ry: 32, fill: view === 'worn' ? '#D6D3CB' : 'rgba(0,0,0,0.35)' }));
+    parts.push(h('path', { key: 'd1', d: 'M186 152 L184 206', stroke: L, strokeWidth: 3 }));
+    parts.push(h('path', { key: 'd2', d: 'M214 152 L216 206', stroke: L, strokeWidth: 3 }));
+    parts.push(h('path', { key: 'pk', d: 'M146 290 L254 290 L274 360 L126 360 Z', stroke: L, strokeWidth: 3, fill: 'none' }));
+  }
+  return parts;
+}
+function hoodie(c, view, key) {
+  if (view === 'worn') {
+    return svgBox([
+      h('g', { key: 'g', transform: 'translate(40 36) scale(0.8)' }, ...hoodieParts(c, 'worn'))
+    ], key);
+  }
+  if (view === 'detail') {
+    const ribs = [];
+    for (let x = 70; x < 340; x += 12) ribs.push(h('path', { key: 'r' + x, d: `M${x} 350 L${x} 440`, stroke: c.line, strokeWidth: 3 }));
+    return svgBox([
+      h('rect', { key: 'sw', x: 60, y: 60, width: 280, height: 380, fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 }),
+      h('path', { key: 'st', d: 'M60 340 L340 340', stroke: c.line, strokeWidth: 3, strokeDasharray: '8 6' }),
+      ...ribs
+    ], key);
+  }
+  return svgBox(view === 'thumb' ? hoodieParts(c, 'front') : hoodieParts(c, view), key);
+}
+function lookSvg(kind) {
+  const st = { stroke: '#86837C', strokeWidth: 1.5 };
+  if (kind === 'tee') return svgBox([h('path', { key: 'a', d: 'M150 130 L182 114 C190 132 210 132 218 114 L250 130 L310 180 L284 214 L258 196 L258 390 L142 390 L142 196 L116 214 L90 180 Z', fill: '#CDBB98', ...st })]);
+  if (kind === 'cargo') return svgBox([
+    h('path', { key: 'a', d: 'M136 90 L264 90 L278 420 L222 420 L200 190 L178 420 L122 420 Z', fill: '#9C988F', ...st }),
+    h('rect', { key: 'p1', x: 124, y: 250, width: 34, height: 52, fill: 'none', stroke: 'rgba(0,0,0,0.25)', strokeWidth: 3 }),
+    h('rect', { key: 'p2', x: 242, y: 250, width: 34, height: 52, fill: 'none', stroke: 'rgba(0,0,0,0.25)', strokeWidth: 3 }),
+    h('rect', { key: 'w', x: 136, y: 90, width: 128, height: 18, fill: 'rgba(0,0,0,0.18)' })
+  ]);
+  if (kind === 'cap') return svgBox([
+    h('path', { key: 'br', d: 'M230 284 L344 300 L338 318 L222 304 Z', fill: '#2B2B2B', ...st }),
+    h('path', { key: 'a', d: 'M110 300 C110 186 290 186 290 300 Z', fill: '#2B2B2B', ...st }),
+    h('circle', { key: 'b', cx: 200, cy: 210, r: 7, fill: 'rgba(255,255,255,0.3)' })
+  ]);
+  return svgBox([
+    h('rect', { key: 's', x: 40, y: 244, width: 320, height: 14, fill: '#2B2B2B' }),
+    h('rect', { key: 'a', x: 110, y: 200, width: 180, height: 110, rx: 46, fill: '#9C988F', ...st }),
+    h('path', { key: 'z', d: 'M140 238 L260 238', stroke: 'rgba(0,0,0,0.3)', strokeWidth: 3 })
+  ]);
+}
+const CAT_URL = 'Catalogue - Mobile.dc.html';
+function goCatalogue(intent, e) {
+  try { sessionStorage.setItem('novastreet-catalogue-intent', JSON.stringify(intent || {})); } catch (err) {}
+  if (e) { if (e.currentTarget && e.currentTarget.getAttribute && e.currentTarget.getAttribute('href')) return; e.preventDefault(); }
+  window.location.href = CAT_URL;
+}
+const MENU_CATS = [['Sweats et hoodies', 'sweats'], ['T-shirts', 'tshirts'], ['Pantalons', 'pantalons'], ['Accessoires', 'accessoires']];
+const CART_KEY = 'novastreet-cart';
+const CART_SOON = 'Le panier sera disponible prochainement.';
+function readCart() { try { const v = JSON.parse(sessionStorage.getItem(CART_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+function cartCount() { return readCart().reduce((n, i) => n + (Number(i.quantity) || 0), 0); }
+function addCartItem(item) {
+  const cart = readCart();
+  const found = cart.find(i => i.productId === item.productId && i.color === item.color && i.size === item.size);
+  if (found) found.quantity += 1; else cart.push({ ...item, quantity: 1 });
+  try { sessionStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) {}
+  return cartCount();
+}
+function sweatBody(d) { return `M150 120 C170 ${d} 230 ${d} 250 120 L304 134 C332 144 346 164 352 196 L374 362 L336 370 L310 226 L308 404 L92 404 L90 226 L64 370 L26 362 L48 196 C54 164 68 144 96 134 Z`; }
+function sweatParts(c, view) {
+  const L = c.line, back = view === 'back', d = back ? 128 : 150;
+  const parts = [h('path', { key: 'b', d: sweatBody(d), fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 })];
+  if (!back) parts.push(h('path', { key: 'in', d: 'M156 122 C176 112 224 112 244 122 C226 142 174 142 156 122 Z', fill: 'rgba(0,0,0,0.3)' }));
+  parts.push(h('path', { key: 'col', d: `M150 120 C170 ${d} 230 ${d} 250 120`, stroke: L, strokeWidth: 10, fill: 'none' }));
+  parts.push(h('path', { key: 'cl', d: 'M30 344 L60 350 L64 370 L26 362 Z', fill: L }));
+  parts.push(h('path', { key: 'cr', d: 'M370 344 L340 350 L336 370 L374 362 Z', fill: L }));
+  parts.push(h('rect', { key: 'hem', x: 92, y: 384, width: 216, height: 20, fill: L }));
+  if (back) {
+    parts.push(h('rect', { key: 'lab', x: 190, y: 134, width: 20, height: 12, fill: L }));
+    parts.push(h('path', { key: 'yk', d: 'M96 134 C150 176 250 176 304 134', stroke: L, strokeWidth: 2, fill: 'none', strokeDasharray: '6 6' }));
+  }
+  return parts;
+}
+function sweat(c, view, key) {
+  if (view === 'worn') return svgBox([
+    h('circle', { key: 'hd', cx: 200, cy: 108, r: 34, fill: '#D6D3CB' }),
+    h('rect', { key: 'nk', x: 186, y: 136, width: 28, height: 50, fill: '#D6D3CB' }),
+    h('g', { key: 'g', transform: 'translate(40 72) scale(0.8)' }, ...sweatParts(c, 'front'))
+  ], key);
+  if (view === 'detail') {
+    const ribs = [], dots = [];
+    for (let x = 70; x < 340; x += 12) ribs.push(h('path', { key: 'r' + x, d: `M${x} 350 L${x} 440`, stroke: c.line, strokeWidth: 3 }));
+    for (let y = 84; y < 330; y += 18) for (let x = 78 + ((y / 18) % 2) * 9; x < 332; x += 18) dots.push(h('circle', { key: x + '-' + y, cx: x, cy: y, r: 2.2, fill: c.line }));
+    return svgBox([
+      h('rect', { key: 'sw', x: 60, y: 60, width: 280, height: 380, fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 }),
+      ...dots,
+      h('path', { key: 'st', d: 'M60 340 L340 340', stroke: c.line, strokeWidth: 3, strokeDasharray: '8 6' }),
+      ...ribs
+    ], key);
+  }
+  return svgBox(sweatParts(c, view === 'thumb' ? 'front' : view), key);
+}
+function teeLine(hex) { return ['#CDBB98', '#D8A7B1'].includes(hex) ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.22)'; }
+function stripeColor(hex) { return ['#CDBB98', '#D8A7B1'].includes(hex) ? '#1E1E1E' : '#F7F6F2'; }
+function teeParts(c, view, striped) {
+  const L = teeLine(c.hex), back = view === 'back', d = back ? 112 : 128;
+  const parts = [h('path', { key: 'b', d: `M166 100 C180 ${d} 220 ${d} 234 100 L300 120 L360 196 L318 230 L300 212 L300 440 L100 440 L100 212 L82 230 L40 196 L100 120 Z`, fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 })];
+  if (!back) parts.push(h('path', { key: 'in', d: 'M170 102 C186 92 214 92 230 102 C214 120 186 120 170 102 Z', fill: 'rgba(0,0,0,0.3)' }));
+  parts.push(h('path', { key: 'col', d: `M166 100 C180 ${d} 220 ${d} 234 100`, stroke: L, strokeWidth: 8, fill: 'none' }));
+  parts.push(h('path', { key: 'sl', d: 'M46 204 L88 236', stroke: L, strokeWidth: 3, strokeDasharray: '6 5' }));
+  parts.push(h('path', { key: 'sr', d: 'M354 204 L312 236', stroke: L, strokeWidth: 3, strokeDasharray: '6 5' }));
+  parts.push(h('path', { key: 'hem', d: 'M100 426 L300 426', stroke: L, strokeWidth: 3, strokeDasharray: '6 5' }));
+  if (back) parts.push(h('rect', { key: 'lab', x: 190, y: 116, width: 20, height: 12, fill: L }));
+  if (striped && !back) {
+    const sc = stripeColor(c.hex);
+    parts.push(h('rect', { key: 's1', x: 101, y: 240, width: 198, height: 16, fill: sc }));
+    parts.push(h('rect', { key: 's2', x: 101, y: 268, width: 198, height: 16, fill: sc }));
+  }
+  return parts;
+}
+function tee(c, view, key, striped) {
+  if (view === 'worn') return svgBox([
+    h('circle', { key: 'hd', cx: 200, cy: 92, r: 34, fill: '#D6D3CB' }),
+    h('rect', { key: 'nk', x: 186, y: 120, width: 28, height: 40, fill: '#D6D3CB' }),
+    h('g', { key: 'g', transform: 'translate(40 66) scale(0.8)' }, ...teeParts(c, 'front', striped))
+  ], key);
+  if (view === 'detail') {
+    const L = teeLine(c.hex), knit = [], ribs = [];
+    for (let y = 168; y < 430; y += 16) for (let x = 72; x < 336; x += 16) knit.push(h('path', { key: x + '-' + y, d: `M${x} ${y} L${x + 4} ${y + 8} L${x + 8} ${y}`, stroke: L, strokeWidth: 1.5, fill: 'none' }));
+    for (let x = 70; x < 340; x += 10) ribs.push(h('path', { key: 'r' + x, d: `M${x} 64 L${x} ${120 + Math.sin((x - 60) / 280 * Math.PI) * 24}`, stroke: L, strokeWidth: 3 }));
+    const parts = [
+      h('rect', { key: 'sw', x: 60, y: 60, width: 280, height: 380, fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 }),
+      ...knit,
+      h('path', { key: 'cb', d: 'M60 60 L340 60 L340 120 C260 156 140 156 60 120 Z', fill: c.hex }),
+      ...ribs,
+      h('path', { key: 'cs', d: 'M60 128 C140 164 260 164 340 128', stroke: L, strokeWidth: 3, strokeDasharray: '8 6', fill: 'none' })
+    ];
+    if (striped) parts.push(h('rect', { key: 'st', x: 61, y: 330, width: 278, height: 40, fill: stripeColor(c.hex) }));
+    return svgBox(parts, key);
+  }
+  return svgBox(teeParts(c, view === 'thumb' ? 'front' : view, striped), key);
+}
+function pantLine(hex) { return ['#9C988F', '#CDBB98'].includes(hex) ? 'rgba(0,0,0,0.22)' : 'rgba(255,255,255,0.22)'; }
+function pantsParts(c, view, kind) {
+  const L = pantLine(c.hex), back = view === 'back', cargo = kind === 'cargo';
+  const body = cargo
+    ? 'M120 60 L280 60 L298 420 L288 452 L216 452 L206 420 L200 190 L194 420 L184 452 L112 452 L102 420 Z'
+    : 'M120 60 L280 60 L294 452 L212 452 L200 190 L188 452 L106 452 Z';
+  const parts = [h('path', { key: 'b', d: body, fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 })];
+  parts.push(h('rect', { key: 'wb', x: 120, y: 60, width: 160, height: 22, fill: L }));
+  [140, 200, 260].forEach(x => parts.push(h('rect', { key: 'lp' + x, x: x - 4, y: 58, width: 8, height: 28, fill: c.hex, stroke: L, strokeWidth: 2 })));
+  if (!back) parts.push(h('path', { key: 'fly', d: 'M200 82 L200 150 C200 160 192 166 184 168', stroke: L, strokeWidth: 3, fill: 'none' }));
+  if (cargo) {
+    parts.push(h('path', { key: 'cf1', d: 'M112 420 L194 420', stroke: L, strokeWidth: 6 }));
+    parts.push(h('path', { key: 'cf2', d: 'M206 420 L288 420', stroke: L, strokeWidth: 6 }));
+    for (let x = 120; x < 184; x += 10) parts.push(h('path', { key: 'g1' + x, d: `M${x} 426 L${x} 450`, stroke: L, strokeWidth: 2 }));
+    for (let x = 222; x < 286; x += 10) parts.push(h('path', { key: 'g2' + x, d: `M${x} 426 L${x} 450`, stroke: L, strokeWidth: 2 }));
+    [[112, 'pl'], [236, 'pr']].forEach(([x, k]) => {
+      parts.push(h('rect', { key: k, x, y: 226, width: 54, height: 72, fill: c.hex, stroke: L, strokeWidth: 3 }));
+      parts.push(h('rect', { key: k + 'f', x: x - 2, y: 218, width: 58, height: 22, fill: c.hex, stroke: L, strokeWidth: 3 }));
+    });
+    if (back) {
+      parts.push(h('rect', { key: 'bp1', x: 138, y: 100, width: 44, height: 46, fill: 'none', stroke: L, strokeWidth: 3 }));
+      parts.push(h('rect', { key: 'bp2', x: 218, y: 100, width: 44, height: 46, fill: 'none', stroke: L, strokeWidth: 3 }));
+    }
+  } else {
+    if (!back) {
+      parts.push(h('path', { key: 'hp1', d: 'M128 82 C138 106 148 118 160 122', stroke: L, strokeWidth: 3, fill: 'none' }));
+      parts.push(h('path', { key: 'hp2', d: 'M272 82 C262 106 252 118 240 122', stroke: L, strokeWidth: 3, fill: 'none' }));
+    } else {
+      parts.push(h('path', { key: 'wl1', d: 'M140 112 L180 112', stroke: L, strokeWidth: 4 }));
+      parts.push(h('path', { key: 'wl2', d: 'M220 112 L260 112', stroke: L, strokeWidth: 4 }));
+    }
+    parts.push(h('path', { key: 'cr1', d: 'M152 130 L148 452', stroke: L, strokeWidth: 2 }));
+    parts.push(h('path', { key: 'cr2', d: 'M248 130 L252 452', stroke: L, strokeWidth: 2 }));
+  }
+  return parts;
+}
+function pants(c, view, key, kind) {
+  if (view === 'worn') return svgBox([
+    h('rect', { key: 'to', x: 136, y: 48, width: 128, height: 40, fill: '#D6D3CB' }),
+    h('rect', { key: 's1', x: 122, y: 402, width: 52, height: 22, fill: '#D6D3CB' }),
+    h('rect', { key: 's2', x: 226, y: 402, width: 52, height: 22, fill: '#D6D3CB' }),
+    h('g', { key: 'g', transform: 'translate(40 40) scale(0.8)' }, ...pantsParts(c, 'front', kind))
+  ], key);
+  if (view === 'detail') {
+    const L = pantLine(c.hex), weave = [];
+    for (let i = -380; i < 380; i += 12) weave.push(h('path', { key: 'w' + i, d: `M${60 + i} 440 L${440 + i} 60`, stroke: L, strokeWidth: 1.2 }));
+    const parts = [
+      h('defs', { key: 'd' }, h('clipPath', { id: 'clip-' + key }, h('rect', { x: 60, y: 60, width: 280, height: 380 }))),
+      h('rect', { key: 'sw', x: 60, y: 60, width: 280, height: 380, fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 }),
+      h('g', { key: 'wv', clipPath: `url(#clip-${key})` }, ...weave)
+    ];
+    if (kind === 'cargo') {
+      parts.push(h('rect', { key: 'pk', x: 110, y: 170, width: 180, height: 220, fill: c.hex, stroke: L, strokeWidth: 4 }));
+      parts.push(h('rect', { key: 'pks', x: 120, y: 180, width: 160, height: 200, fill: 'none', stroke: L, strokeWidth: 2, strokeDasharray: '8 6' }));
+      parts.push(h('rect', { key: 'fl', x: 102, y: 130, width: 196, height: 64, fill: c.hex, stroke: L, strokeWidth: 4 }));
+      parts.push(h('circle', { key: 'bt', cx: 200, cy: 178, r: 9, fill: L }));
+    } else {
+      parts.push(h('path', { key: 'sm', d: 'M200 60 L200 440', stroke: L, strokeWidth: 5 }));
+      parts.push(h('path', { key: 'st1', d: 'M188 60 L188 440', stroke: L, strokeWidth: 2, strokeDasharray: '8 6' }));
+      parts.push(h('path', { key: 'st2', d: 'M212 60 L212 440', stroke: L, strokeWidth: 2, strokeDasharray: '8 6' }));
+    }
+    return svgBox(parts, key);
+  }
+  return svgBox(pantsParts(c, view === 'thumb' ? 'front' : view, kind), key);
+}
+function accLine(hex) { return ['#9C988F', '#CDBB98'].includes(hex) ? 'rgba(0,0,0,0.25)' : 'rgba(255,255,255,0.25)'; }
+const ACC_ST = { stroke: '#86837C', strokeWidth: 1.5 };
+function capCrown(c, L, key) {
+  return [
+    h('path', { key: key + 'cr', d: 'M90 300 C90 150 310 150 310 300 Z', fill: c.hex, ...ACC_ST }),
+    h('path', { key: key + 's1', d: 'M200 188 L200 300', stroke: L, strokeWidth: 3 }),
+    h('path', { key: key + 's2', d: 'M200 188 C160 190 140 240 138 300', stroke: L, strokeWidth: 3, fill: 'none' }),
+    h('path', { key: key + 's3', d: 'M200 188 C240 190 260 240 262 300', stroke: L, strokeWidth: 3, fill: 'none' }),
+    h('circle', { key: key + 'bt', cx: 200, cy: 188, r: 9, fill: c.hex, stroke: L, strokeWidth: 3 })
+  ];
+}
+function cap(c, view, key) {
+  const L = accLine(c.hex);
+  if (view === 'front') return svgBox([
+    ...capCrown(c, L, 'f'),
+    h('circle', { key: 'e1', cx: 160, cy: 218, r: 4, fill: L }), h('circle', { key: 'e2', cx: 240, cy: 218, r: 4, fill: L }),
+    h('path', { key: 'br', d: 'M70 300 C120 282 280 282 330 300 C306 356 94 356 70 300 Z', fill: c.hex, ...ACC_ST }),
+    h('path', { key: 'brs', d: 'M86 306 C130 292 270 292 314 306', stroke: L, strokeWidth: 3, strokeDasharray: '8 6', fill: 'none' })
+  ], key);
+  if (view === 'side') return svgBox([
+    h('path', { key: 'cr', d: 'M120 300 C116 170 300 156 312 300 Z', fill: c.hex, ...ACC_ST }),
+    h('path', { key: 's1', d: 'M214 193 C200 210 196 260 198 300', stroke: L, strokeWidth: 3, fill: 'none' }),
+    h('path', { key: 's2', d: 'M214 193 C260 200 280 250 284 300', stroke: L, strokeWidth: 3, fill: 'none' }),
+    h('circle', { key: 'bt', cx: 214, cy: 193, r: 9, fill: c.hex, stroke: L, strokeWidth: 3 }),
+    h('circle', { key: 'e', cx: 250, cy: 214, r: 4, fill: L }),
+    h('path', { key: 'br', d: 'M124 296 C80 296 36 306 18 336 C70 340 118 326 150 304 Z', fill: c.hex, ...ACC_ST }),
+    h('rect', { key: 'st', x: 290, y: 272, width: 24, height: 12, fill: L })
+  ], key);
+  if (view === 'back') return svgBox([
+    ...capCrown(c, L, 'b'),
+    h('path', { key: 'op', d: 'M150 300 C150 248 250 248 250 300 Z', fill: '#FFFFFF', stroke: L, strokeWidth: 3 }),
+    h('rect', { key: 'st', x: 136, y: 270, width: 128, height: 18, fill: c.hex, stroke: '#86837C', strokeWidth: 1.5 }),
+    h('rect', { key: 'bk', x: 214, y: 262, width: 22, height: 34, fill: 'none', stroke: '#86837C', strokeWidth: 6 }),
+    h('path', { key: 'brb', d: 'M86 300 L314 300', stroke: '#86837C', strokeWidth: 6 })
+  ], key);
+  const holes = [];
+  for (let x = 84; x < 200; x += 28) holes.push(h('circle', { key: 'h' + x, cx: x, cy: 300, r: 7, fill: '#FFFFFF', stroke: L, strokeWidth: 2 }));
+  return svgBox([
+    h('rect', { key: 'fab', x: 40, y: 60, width: 320, height: 190, fill: c.hex, ...ACC_ST }),
+    h('path', { key: 'op', d: 'M120 250 C120 150 280 150 280 250 Z', fill: '#FFFFFF', stroke: L, strokeWidth: 4 }),
+    h('rect', { key: 'st', x: 40, y: 270, width: 320, height: 60, fill: c.hex, ...ACC_ST }),
+    h('path', { key: 'sd1', d: 'M40 280 L360 280', stroke: L, strokeWidth: 2, strokeDasharray: '8 6' }),
+    h('path', { key: 'sd2', d: 'M40 320 L360 320', stroke: L, strokeWidth: 2, strokeDasharray: '8 6' }),
+    ...holes,
+    h('rect', { key: 'bk', x: 236, y: 254, width: 56, height: 92, fill: 'none', stroke: '#86837C', strokeWidth: 12 }),
+    h('rect', { key: 'tab', x: 300, y: 282, width: 60, height: 36, fill: c.hex, stroke: L, strokeWidth: 3 })
+  ], key);
+}
+const BAG_BODY = 'M90 210 C90 176 310 176 310 210 L302 306 C300 330 100 330 98 306 Z';
+function bagParts(c, L, back) {
+  const parts = [
+    h('rect', { key: 'sp', x: 16, y: 224, width: 368, height: 16, fill: c.hex, ...ACC_ST }),
+    h('rect', { key: 'bk', x: 330, y: 216, width: 26, height: 32, fill: '#1E1E1E' }),
+    h('path', { key: 'b', d: BAG_BODY, fill: c.hex, ...ACC_ST })
+  ];
+  if (!back) {
+    parts.push(h('path', { key: 'z', d: 'M110 214 C150 198 250 198 290 214', stroke: L, strokeWidth: 5, strokeDasharray: '3 3', fill: 'none' }));
+    parts.push(h('rect', { key: 'zp', x: 280, y: 206, width: 12, height: 26, fill: '#86837C' }));
+  } else {
+    parts.push(h('path', { key: 'z', d: 'M126 262 L274 262', stroke: L, strokeWidth: 5, strokeDasharray: '3 3' }));
+    parts.push(h('rect', { key: 'zp', x: 266, y: 256, width: 12, height: 26, fill: '#86837C' }));
+    parts.push(h('path', { key: 'pk', d: 'M116 248 L284 248 L280 306 L120 306 Z', fill: 'rgba(0,0,0,0.14)', stroke: L, strokeWidth: 2 }));
+    parts.push(h('rect', { key: 'lp1', x: 120, y: 180, width: 20, height: 46, fill: c.hex, stroke: L, strokeWidth: 2 }));
+    parts.push(h('rect', { key: 'lp2', x: 260, y: 180, width: 20, height: 46, fill: c.hex, stroke: L, strokeWidth: 2 }));
+  }
+  return parts;
+}
+function bag(c, view, key) {
+  const L = accLine(c.hex);
+  if (view === 'worn') return svgBox([
+    h('circle', { key: 'hd', cx: 200, cy: 70, r: 40, fill: '#D6D3CB' }),
+    h('path', { key: 'to', d: 'M110 130 C110 112 290 112 290 130 L318 220 L300 500 L100 500 L82 220 Z', fill: '#D6D3CB' }),
+    h('path', { key: 'st', d: 'M132 120 L292 420', stroke: c.hex, strokeWidth: 14 }),
+    h('g', { key: 'g', transform: 'translate(146 160) rotate(-24 100 120) scale(0.52)' }, ...bagParts(c, L, false).slice(2))
+  ], key);
+  if (view === 'detail') {
+    const grid = [], teeth = [];
+    for (let i = 72; i < 340; i += 10) grid.push(h('path', { key: 'gx' + i, d: `M${i} 60 L${i} 440`, stroke: L, strokeWidth: 0.8 }));
+    for (let j = 70; j < 440; j += 10) grid.push(h('path', { key: 'gy' + j, d: `M60 ${j} L340 ${j}`, stroke: L, strokeWidth: 0.8 }));
+    for (let x = 64; x < 336; x += 12) teeth.push(h('rect', { key: 't' + x, x, y: (x / 12) % 2 ? 236 : 250, width: 8, height: 14, fill: '#86837C' }));
+    return svgBox([
+      h('rect', { key: 'sw', x: 60, y: 60, width: 280, height: 380, fill: c.hex, ...ACC_ST }),
+      ...grid,
+      h('rect', { key: 'tp', x: 60, y: 226, width: 280, height: 48, fill: c.hex, stroke: L, strokeWidth: 2 }),
+      ...teeth,
+      h('rect', { key: 'sl', x: 214, y: 228, width: 40, height: 44, fill: '#86837C' }),
+      h('rect', { key: 'pl', x: 226, y: 272, width: 16, height: 64, fill: '#86837C' })
+    ], key);
+  }
+  return svgBox(bagParts(c, L, view === 'back'), key);
+}
+
+/* NS-DESK-JS:start */
+const NS_CART_KEY = 'novastreet-cart';
+const NS_FREE_CENTS = 8000, NS_SHIP_CENTS = 699;
+const NS_NF = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const nsFmt = (cents) => NS_NF.format(cents / 100) + '\u00a0€';
+function nsReadCart() { try { const v = JSON.parse(sessionStorage.getItem(NS_CART_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+function nsTotals(cart) {
+  const count = cart.reduce((n, i) => n + (Number(i.quantity) || 0), 0);
+  const sub = cart.reduce((n, i) => n + Math.round(Number(i.unitPrice) * 100) * (Number(i.quantity) || 0), 0);
+  const ship = cart.length && sub < NS_FREE_CENTS ? NS_SHIP_CENTS : 0;
+  return { count, sub, ship, total: sub + ship, remain: cart.length && sub < NS_FREE_CENTS ? NS_FREE_CENTS - sub : 0 };
+}
+const NS_HEX = { 'Noir': '#1F1F1F', 'Bleu ardoise': '#3A5A80', 'Bordeaux': '#7A1F3D', 'Rose poudré': '#D8A7B1', 'Vert kaki': '#5E6B3A', 'Sable': '#CDBB98', 'Gris': '#9C988F' };
+function nsColorOf(name) { const hex = NS_HEX[name] || '#9C988F'; return { hex, line: ['#D8A7B1', '#CDBB98', '#9C988F'].includes(hex) ? 'rgba(0,0,0,0.22)' : 'rgba(255,255,255,0.22)' }; }
+const NS_DRAW = {
+  'hoodie-axe': (c, k) => hoodie(c, 'front', k),
+  'sweat-pulse': (c, k) => sweat(c, 'front', k),
+  'tshirt-bloc': (c, k) => tee(c, 'front', k, false),
+  'tshirt-ligne': (c, k) => tee(c, 'front', k, true),
+  'cargo-signal': (c, k) => pants(c, 'front', k, 'cargo'),
+  'casquette-drop': (c, k) => cap(c, 'front', k),
+  'sac-banane-beton': (c, k) => bag(c, 'front', k)
+};
+const NS_DESK_IC = {
+  search: icon(['M4 11a7 7 0 1 0 14 0a7 7 0 1 0 -14 0', 'M16 16l5 5']),
+  empty: icon(['M5 8h14l-1 13H6L5 8z', 'M9 8V6a3 3 0 0 1 6 0v2'], { width: 56, height: 56, strokeWidth: 1.2 }),
+  check: h('svg', { width: 24, height: 24, viewBox: '0 0 24 24', 'aria-hidden': 'true', focusable: 'false', style: { display: 'block', flex: '0 0 auto' } },
+    h('circle', { cx: 12, cy: 12, r: 12, fill: '#1E1E1E' }), h('path', { d: 'M6.5 12.5l3.5 3.5 7.5-8', stroke: '#FFFFFF', strokeWidth: 2, fill: 'none' }))
+};
+const NS_FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])';
+function nsGoCatalogue(intent) {
+  try { sessionStorage.setItem('novastreet-catalogue-intent', JSON.stringify(intent || {})); } catch (err) {}
+  window.location.href = 'Catalogue - Mobile.dc.html';
+}
+const NSMINI = {
+  mount(comp) {
+    comp._nsMq = window.matchMedia('(min-width: 1024px)');
+    comp._nsMqFn = () => { if (!comp._nsMq.matches && comp.state.miniOpen) NSMINI.close(comp, false); };
+    comp._nsMq.addEventListener('change', comp._nsMqFn);
+  },
+  unmount(comp) { if (comp._nsMq) comp._nsMq.removeEventListener('change', comp._nsMqFn); },
+  isDesk() { return window.matchMedia('(min-width: 1024px)').matches; },
+  setInert(on) {
+    const mini = document.getElementById('ns-mini');
+    const root = document.querySelector('[data-ns-root]'); if (!root) return;
+    [...root.children].forEach(el => { if (!on) { el.inert = false; return; } if (!(mini && el.contains(mini))) el.inert = true; });
+  },
+  open(comp, opener, added) {
+    comp._nsMiniOpener = opener || document.activeElement;
+    comp.setState({ miniOpen: true, miniAdded: added || null });
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => requestAnimationFrame(() => {
+      NSMINI.setInert(true);
+      const t = document.getElementById(added ? 'ns-mini-added' : 'ns-mini-title'); t && t.focus();
+    }), 30);
+  },
+  close(comp, restore) {
+    NSMINI.setInert(false);
+    comp.setState({ miniOpen: false, miniAdded: null });
+    document.body.style.overflow = '';
+    if (restore !== false) setTimeout(() => { const o = comp._nsMiniOpener; o && o.isConnected && o.focus(); }, 0);
+  },
+  key(comp, e) {
+    if (!comp.state.miniOpen) return false;
+    if (e.key === 'Escape') { e.preventDefault(); NSMINI.close(comp); return true; }
+    if (e.key === 'Tab') {
+      const p = document.getElementById('ns-mini'); if (!p) return true;
+      const els = [...p.querySelectorAll(NS_FOCUSABLE)];
+      if (!els.length) { e.preventDefault(); return true; }
+      const first = els[0], last = els[els.length - 1], a = document.activeElement;
+      if (e.shiftKey && (a === first || !p.contains(a) || a.id === 'ns-mini-title' || a.id === 'ns-mini-added')) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && (a === last || !p.contains(a))) { e.preventDefault(); first.focus(); }
+    }
+    return true;
+  },
+  vals(comp, page) {
+    const s = comp.state;
+    const cart = nsReadCart();
+    const t = nsTotals(cart);
+    const ad = s.miniAdded;
+    return {
+      miniOpen: !!s.miniOpen, miniEmpty: !cart.length, miniHas: cart.length > 0,
+      miniCountText: `${t.count} article${t.count > 1 ? 's' : ''}`,
+      miniLines: cart.map((it, idx) => {
+        const q = Number(it.quantity) || 1;
+        const draw = NS_DRAW[it.productId];
+        return {
+          name: it.name, color: it.color, qty: q,
+          sizeText: String(it.size).startsWith('Taille unique') ? it.size : `Taille : ${it.size}`,
+          lineTotal: nsFmt(Math.round(Number(it.unitPrice) * 100) * q),
+          svg: draw ? draw(nsColorOf(it.color), 'mini-' + idx + '-' + it.productId) : null
+        };
+      }),
+      miniSub: nsFmt(t.sub), miniShip: t.ship ? nsFmt(t.ship) : 'Offerte', miniTotal: nsFmt(t.total),
+      miniHasRemain: t.remain > 0, miniRemainText: `Plus que ${nsFmt(t.remain)} pour profiter de la livraison offerte.`,
+      miniAdded: !!ad, miniAddedText: ad ? `${ad.name} · ${ad.color} · ${String(ad.size).startsWith('Taille unique') ? ad.size : 'Taille ' + ad.size}` : '',
+      openMini: (e) => NSMINI.open(comp, e && e.currentTarget, null),
+      closeMini: () => NSMINI.close(comp),
+      miniGoCatalogue: () => { NSMINI.close(comp, false); nsGoCatalogue({}); },
+      miniGoCart: () => { if (page === 'panier') NSMINI.close(comp); else { NSMINI.close(comp, false); window.location.href = 'Panier - Mobile.dc.html'; } },
+      deskIc: NS_DESK_IC,
+      deskSearch: () => { if (page === 'catalogue') { const i = document.getElementById('ns-cat-search'); i && i.focus(); } else nsGoCatalogue({ focus: true }); }
+    };
+  }
+};
+/* NS-DESK-JS:end */
+const LOOKS = [
+  { name: 'T-SHIRT BLOC', price: '35 €', href: 'Fiche produit - T-SHIRT BLOC.dc.html', svg: lookSvg('tee') },
+  { name: 'CARGO SIGNAL', price: '79 €', href: 'Fiche produit - CARGO SIGNAL.dc.html', svg: lookSvg('cargo') },
+  { name: 'CASQUETTE DROP', href: 'Fiche produit - CASQUETTE DROP.dc.html', price: '29 €', svg: lookSvg('cap') },
+  { name: 'SAC BANANE BÉTON', href: 'Fiche produit - SAC BANANE BETON.dc.html', price: '39 €', svg: lookSvg('bag') }
+];
+const PRODUCT = { id: 'hoodie-axe', name: 'HOODIE AXE', price: 89 };
+const GUIDE = [['XS', 112, 66], ['S', 118, 68], ['M', 124, 70], ['L', 130, 72], ['XL', 136, 74], ['XXL', 142, 76]].map(([s, c, l]) => ({ s, c, l }));
+const SLIDES = [['Porté', 'worn'], ['Face', 'front'], ['Dos', 'back'], ['Détail matière', 'detail']];
+const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])';
+
+class Component extends DCLogic {
+  state = { miniOpen: false, miniAdded: null, menuOpen: false, menuQ: '', toast: '', color: 0, size: null, xxlTouched: false, sizeError: false, cart: 0, slide: 0, sheet: null, email: '', emailError: false, alertDone: false, open: { desc: false, mat: false, liv: false } };
+  carRef = React.createRef();
+  menuBtnRef = React.createRef();
+  menuRef = React.createRef();
+  openMenu = () => {
+    this.setState({ menuOpen: true });
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => requestAnimationFrame(() => { const p = document.getElementById('ns-menu'); const f = p && p.querySelector('[data-autofocus]'); f && f.focus(); }), 0);
+  };
+  closeMenu = () => {
+    this.setState({ menuOpen: false });
+    document.body.style.overflow = '';
+    setTimeout(() => { const b = this.menuBtnRef.current; b && b.focus(); }, 0);
+  };
+  showMsg(msg) {
+    clearTimeout(this.toastT);
+    this.setState({ toast: '' }, () => this.setState({ toast: msg }));
+    this.toastT = setTimeout(() => this.setState({ toast: '' }), 3000);
+  }
+  toastFiche = (e) => { if (e) e.preventDefault(); this.showMsg('Fiche non incluse dans le prototype'); };
+  cartSoon = (e) => { if (e) e.preventDefault(); window.location.href = 'Panier - Mobile.dc.html'; };
+  activateKey(fn) { return (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fn(e); } }; }
+  panelRef = React.createRef();
+  sizeRef = React.createRef();
+  sizeGroupRef = React.createRef();
+  livRef = React.createRef();
+  goLiv = (e) => {
+    e.preventDefault();
+    this.setState(s => ({ open: { ...s.open, liv: true } }));
+    setTimeout(() => requestAnimationFrame(() => {
+      const el = this.livRef.current || document.getElementById('livraison-retours'); if (!el) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      el.focus({ preventScroll: true });
+      const sp = this.scrollParent(el);
+      const delta = el.getBoundingClientRect().top - (sp ? sp.getBoundingClientRect().top : 0) - 16;
+      const opts = { top: delta, behavior: reduce ? 'auto' : 'smooth' };
+      sp ? sp.scrollBy(opts) : window.scrollBy(opts);
+    }), 0);
+  };
+  scrollParent(el) {
+    for (let p = el.parentElement; p && p !== document.body && p !== document.documentElement; p = p.parentElement) {
+      const oy = getComputedStyle(p).overflowY;
+      if ((oy === 'auto' || oy === 'scroll') && p.scrollHeight > p.clientHeight) return p;
+    }
+    return null;
+  }
+
+  componentDidMount() {
+    this.onPageShow = () => this.forceUpdate();
+    window.addEventListener('pageshow', this.onPageShow);
+    window.addEventListener('focus', this.onPageShow);
+    NSMINI.mount(this);
+    this.onKey = (e) => {
+      if (NSMINI.key(this, e)) return;
+      if (this.state.menuOpen) {
+        if (e.key === 'Escape') { e.preventDefault(); this.closeMenu(); return; }
+        if (e.key === 'Tab') {
+          const p = document.getElementById('ns-menu'); if (!p) return;
+          const els = [...p.querySelectorAll(FOCUSABLE)];
+          if (!els.length) return;
+          const first = els[0], last = els[els.length - 1], a = document.activeElement;
+          if (e.shiftKey && (a === first || !p.contains(a))) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && (a === last || !p.contains(a))) { e.preventDefault(); first.focus(); }
+        }
+        return;
+      }
+      if (!this.state.sheet) return;
+      if (e.key === 'Escape') { e.preventDefault(); this.close(); return; }
+      if (e.key === 'Tab') {
+        const p = this.panelRef.current; if (!p) return;
+        const els = [...p.querySelectorAll(FOCUSABLE)];
+        if (!els.length) { e.preventDefault(); p.focus(); return; }
+        const first = els[0], last = els[els.length - 1], a = document.activeElement;
+        if (e.shiftKey && (a === first || a === p || !p.contains(a))) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && (a === last || !p.contains(a))) { e.preventDefault(); first.focus(); }
+      }
+    };
+    document.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount() { NSMINI.unmount(this); document.removeEventListener('keydown', this.onKey); document.body.style.overflow = ''; }
+  componentDidUpdate(pp, psArg) {
+    const ps = psArg || this._prevState || this.state;
+    this._prevState = this.state;
+    const s = this.state;
+    if (!ps.sheet && s.sheet) {
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => {
+        const p = this.panelRef.current; if (!p) return;
+        (p.querySelector('[data-autofocus]') || p).focus();
+      });
+    }
+    if (ps.sheet && !s.sheet) document.body.style.overflow = '';
+    if (!ps.alertDone && s.alertDone) {
+      requestAnimationFrame(() => { const b = this.panelRef.current && this.panelRef.current.querySelector('[data-done-focus]'); b && b.focus(); });
+    }
+  }
+  openSheet(type, e) {
+    if (e && e.preventDefault) e.preventDefault();
+    this.opener = (e && e.currentTarget) || document.activeElement;
+    setTimeout(() => requestAnimationFrame(() => { const p = this.panelRef.current || document.querySelector('[role="dialog"][aria-modal="true"]:not(#ns-menu)'); p && (p.querySelector('[data-autofocus]') || p).focus(); }), 50);
+    this.setState(type === 'alert' ? { sheet: type, email: '', emailError: false, alertDone: false } : { sheet: type });
+  }
+  close = () => {
+    this.setState({ sheet: null });
+    document.body.style.overflow = '';
+    setTimeout(() => { const o = this.opener; o && o.isConnected && o.focus(); }, 0);
+  };
+  goSlide(i) {
+    const el = this.carRef.current; if (!el) return;
+    const n = SLIDES.length; i = (i + n) % n;
+    el.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' });
+  }
+  onCarScroll = () => {
+    const el = this.carRef.current; if (!el) return;
+    const i = Math.round(el.scrollLeft / el.clientWidth);
+    if (i !== this.state.slide) this.setState({ slide: i });
+  };
+  pickSize(id) {
+    if (UNAVAILABLE.includes(id)) { this.setState({ xxlTouched: true }); return; }
+    this.setState({ size: id, sizeError: false, xxlTouched: false });
+  }
+  addToCart = () => {
+    if (!this.state.size) {
+      this.setState({ sizeError: true });
+      setTimeout(() => requestAnimationFrame(() => {
+        const el = this.sizeRef.current; if (!el) return;
+        const g = this.sizeGroupRef.current;
+        g && g.focus({ preventScroll: true });
+        const sp = this.scrollParent(el);
+        const delta = el.getBoundingClientRect().top - (sp ? sp.getBoundingClientRect().top : 0) - 16;
+        if (sp) sp.scrollBy({ top: delta, behavior: 'smooth' });
+        else window.scrollBy({ top: delta, behavior: 'smooth' });
+      }), 0);
+      return;
+    }
+    addCartItem({ productId: PRODUCT.id, name: PRODUCT.name, unitPrice: PRODUCT.price, color: COLORS[this.state.color].name, size: this.state.size });
+    this.setState({ cartTick: Date.now() });
+    if (NSMINI.isDesk()) { NSMINI.open(this, document.activeElement, { name: PRODUCT.name, color: COLORS[this.state.color].name, size: this.state.size }); return; }
+    this.openSheet('confirm');
+  };
+  submitAlert = (e) => {
+    e.preventDefault();
+    const ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(this.state.email.trim());
+    if (!ok) {
+      this.setState({ emailError: true });
+      const i = this.panelRef.current && this.panelRef.current.querySelector('input'); i && i.focus();
+    } else {
+      this.setState({ alertDone: true, emailError: false });
+      setTimeout(() => requestAnimationFrame(() => { const b = this.panelRef.current && this.panelRef.current.querySelector('[data-done-focus]'); b && b.focus(); }), 0);
+    }
+  };
+  toggle(k) { this.setState(s => ({ open: { ...s.open, [k]: !s.open[k] } })); }
+
+  renderVals() {
+    const s = this.state;
+    const c = COLORS[s.color];
+    const ind = this.props.indicator ?? 'les deux';
+    const dotBase = { width: 8, height: 8, borderRadius: '50%', display: 'block' };
+    const chevStyle = (o) => ({ display: 'flex', transition: 'transform 200ms', transform: o ? 'rotate(180deg)' : 'none', marginLeft: 12 });
+    const sizeBase = { flex: '1 1 0', minWidth: 48, height: 48, borderRadius: 0, padding: 0, cursor: 'pointer', font: "600 14px/20px 'Work Sans', sans-serif", background: '#FFFFFF', color: '#1E1E1E', border: '1px solid #86837C' };
+    return {
+      ...NSMINI.vals(this, 'fiche'),
+      deskNav: [
+        { label: 'Nouveautés', href: 'Accueil - Mobile.dc.html#nouveautes', current: 'false', go: undefined },
+        ...MENU_CATS.map(([label, id]) => ({ label, href: 'Catalogue - Mobile.dc.html', current: 'false', go: (e) => goCatalogue({ cat: id }, e) }))
+      ],
+      ic: IC,
+      cart: cartCount(),
+      hasCart: cartCount() > 0,
+      cartLabel: cartCount() > 0 ? `Panier, ${cartCount()} article${cartCount() > 1 ? 's' : ''}` : 'Panier, vide',
+      cartAnnounce: s.cartTick && cartCount() > 0 ? `Panier : ${cartCount()} article${cartCount() > 1 ? 's' : ''}` : '',
+      cartSoon: this.cartSoon,
+      carRef: this.carRef, panelRef: this.panelRef, sizeRef: this.sizeRef, sizeGroupRef: this.sizeGroupRef,
+      slideLabel: SLIDES[s.slide][0],
+      mainAria: `HOODIE AXE, ${c.name}, vue ${SLIDES[s.slide][0]}`,
+      mainSvg: hoodie(c, SLIDES[s.slide][1], 'main-' + SLIDES[s.slide][1]),
+      thumbs: SLIDES.map(([label, view], i) => ({
+        aria: `Afficher la vue ${label}`, pressed: i === s.slide ? 'true' : 'false',
+        pick: () => this.setState({ slide: i }),
+        svg: React.cloneElement(hoodie(c, view, 't-' + view), { viewBox: { worn: '0 0 400 500', front: '110 140 180 225', back: '80 50 240 300', detail: '100 240 160 200' }[view] }),
+        style: { boxSizing: 'border-box', width: 63, height: 79, flex: '0 0 79px', padding: 0, borderRadius: 0, background: '#FFFFFF', cursor: 'pointer', display: 'block', overflow: 'hidden', border: i === s.slide ? '2px solid #1E1E1E' : '2px solid #D6D3CB', outlineOffset: 2 }
+      })),
+      goLiv: this.goLiv,
+      noop: (e) => e.preventDefault(),
+      onCarScroll: this.onCarScroll,
+      slides: SLIDES.map(([label, view], i) => ({ label, aria: `${i + 1} sur ${SLIDES.length} : ${label}`, svg: hoodie(c, view, view) })),
+      showArrows: this.props.showArrows ?? true,
+      showDots: ind !== 'fraction',
+      showFraction: ind !== 'points',
+      dots: SLIDES.map((_, i) => ({ style: { ...dotBase, background: i === s.slide ? '#1E1E1E' : '#D6D3CB' } })),
+      fraction: `${s.slide + 1}/${SLIDES.length}`,
+      prevSlide: () => this.goSlide(s.slide - 1),
+      nextSlide: () => this.goSlide(s.slide + 1),
+      colorName: c.name,
+      colorUpper: c.name.toUpperCase(),
+      swatches: COLORS.map((col, i) => ({
+        aria: `Coloris ${col.name}`,
+        pressed: i === s.color ? 'true' : 'false',
+        pick: () => this.setState({ color: i }),
+        dot: { width: 32, height: 32, borderRadius: '50%', display: 'block', background: col.hex, border: '1px solid #86837C', boxShadow: i === s.color ? '0 0 0 2px #FFFFFF, 0 0 0 4px #1E1E1E' : 'none' }
+      })),
+      sizeSuffix: s.size ? ` : ${s.size}` : '',
+      sizes: SIZES.map(id => {
+        const un = UNAVAILABLE.includes(id), sel = s.size === id;
+        return {
+          id, pressed: sel ? 'true' : 'false', disabled: un ? 'true' : 'false',
+          aria: un ? `${id}, indisponible` : `Taille ${id}`,
+          pick: () => this.pickSize(id),
+          style: un ? { ...sizeBase, color: '#767676', border: '1px solid #D6D3CB', textDecoration: 'line-through' }
+            : sel ? { ...sizeBase, background: '#1E1E1E', color: '#FFFFFF', border: '1px solid #1E1E1E' } : sizeBase
+        };
+      }),
+      size: s.size,
+      sizeError: s.sizeError,
+      xxlTouched: s.xxlTouched,
+      openGuide: (e) => this.openSheet('guide', e),
+      openAlert: (e) => this.openSheet('alert', e),
+      open: s.open,
+      chev: { desc: chevStyle(s.open.desc), mat: chevStyle(s.open.mat), liv: chevStyle(s.open.liv) },
+      toggleDesc: () => this.toggle('desc'), toggleMat: () => this.toggle('mat'), toggleLiv: () => this.toggle('liv'),
+      looks: LOOKS.map(p => ({ ...p, aria: `${p.name}, ${p.price}`, click: p.href ? undefined : this.toastFiche, key: p.href ? undefined : this.activateKey(this.toastFiche) })),
+      toast: !!s.toast, toastMsg: s.toast, toastBottom: !!s.toast && !s.sheet, toastTop: !!s.toast && !!s.sheet,
+      menuBtnRef: this.menuBtnRef, menuRef: this.menuRef, menuOpen: s.menuOpen, menuExpanded: s.menuOpen ? 'true' : 'false',
+      openMenu: this.openMenu, closeMenu: this.closeMenu,
+      menuQ: s.menuQ, onMenuQ: (e) => this.setState({ menuQ: e.target.value }),
+      submitMenuSearch: (e) => { e.preventDefault(); goCatalogue({ q: s.menuQ.trim() }); },
+      menuLinks: [
+        { label: 'Nouveautés', go: (e) => goCatalogue({ sort: 'new' }, e) },
+        ...MENU_CATS.map(([label, id]) => ({ label, go: (e) => goCatalogue({ cat: id }, e) }))
+      ],
+      addToCart: this.addToCart,
+      sheetOpen: !!s.sheet,
+      sheetLabel: s.sheet === 'confirm' ? 'Ajouté au panier' : s.sheet === 'alert' ? 'Être alerté du retour en stock' : s.sheet === 'legal' ? 'Mentions légales' : 'Guide des tailles',
+      isConfirm: s.sheet === 'confirm', isAlert: s.sheet === 'alert', isGuide: s.sheet === 'guide', isLegal: s.sheet === 'legal',
+      openLegal: (e) => this.openSheet('legal', e), legalKey: this.activateKey((e) => this.openSheet('legal', e)),
+      closeSheet: this.close,
+      goCart: this.cartSoon,
+      thumb: hoodie(c, 'thumb', 'thumb'),
+      alertForm: !s.alertDone, alertDone: s.alertDone,
+      email: s.email,
+      onEmail: (e) => this.setState({ email: e.target.value }),
+      emailError: s.emailError,
+      emailStyle: { height: 48, width: '100%', padding: '0 12px', borderRadius: 0, background: '#FFFFFF', fontSize: 16, color: '#1E1E1E', border: s.emailError ? '2px solid #B3261E' : '1px solid #86837C', outlineColor: '#00695C' },
+      submitAlert: this.submitAlert,
+      guideRows: GUIDE
+    };
+  }
+}
+</script>
+</body>
+</html>
